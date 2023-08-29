@@ -1,0 +1,492 @@
+@font-face {
+    font-family: 'space_monobold';
+    src: url('fonts/spacemono-bold-webfont.woff2') format('woff2'),
+         url('fonts/spacemono-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+  padding-top: 54px;
+  height: 100%;
+}
+
+@media (min-width: 992px) {
+  body {
+    padding-top: 56px;
+  }
+}
+
+a {
+    color: #bfbfbf;
+}
+
+a:hover {
+    color: #828282;
+}
+
+.bg-white {
+	background: #fff;
+}
+
+.pt-6 {
+    padding-top: 6px;
+}
+
+.mlr5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#intro, #stockists, #about, #services, #contact, #privacypolicy {
+    padding-top: 75px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Hide the browser's default radio button */
+input.custom {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* On mouse-over, add a grey background color */
+input.custom:hover ~ .checkmark {
+  border: 2px solid #000;
+  border-radius: 12px;
+}
+
+/* When the radio button is checked, add a blue background */
+input.custom:checked ~ .checkmark {
+  border: 2px solid black;
+  border-radius: 15px;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  border-radius: 12px;
+}
+
+.checkmark.male:after {
+	top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    font-weight: bold;
+    content: "MEN'S";
+    font-size: 1.2rem;
+    line-height: 35px;
+}
+
+.checkmark.female:after {
+	top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    font-weight: bold;
+    content: "WOMEN'S";
+    font-size: 1.2rem;
+    line-height: 35px;
+}
+
+/* Show the indicator (dot/circle) when checked */
+input.custom:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.checkmark:after {
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background: white;
+  color: black;
+  font-weight: bold;
+}
+
+
+.square {
+    height: 150px;
+    width: 150px;
+    border: 2px solid black;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+    margin: 0 auto;
+    display: block;
+}
+
+#gender label {
+	font-size: 1.2rem;
+	border: 1px solid black;
+    border-radius: 12px;
+}
+
+.gender-btn .btn-custom {
+    font-size: 1.2rem;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 100%;
+    color: black;
+    transition: 0.2s linear;
+}
+
+.gender-btn .btn-custom.active {
+    background: black;
+    color: white;
+}
+
+.gender-btn .btn-custom:hover {
+    background: black;
+    color: white;
+}
+
+#categories .category-btn {
+    width: 90%;
+    height: 25vh;
+    margin: 0px;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+    display: block;
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center;
+	padding: 0px;
+	border-radius: 16px;
+}
+
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+.floating-brand {
+    height: 75px;
+    padding-top: 30px;
+}
+
+.floating-brand h2 {
+    width:100%; 
+    text-align:center;
+    border-bottom: 1px solid #000; 
+    line-height:0.1em; 
+    margin:10px 0 20px; 
+} 
+
+.floating-brand span {
+    font-size: 3rem;
+    background: white;
+}
+
+.title-bar {
+    margin-bottom: 20px;
+}
+
+
+.stockist-item {
+	height: auto;
+    padding: 5px;
+}
+
+
+.stockist-item a {
+	height: auto;
+	display: block;
+}
+
+.stockist-logo {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    vertical-align: middle;
+    display: block;
+    border: 1px solid black;
+    border-radius: 20px;
+}
+
+.stockist-title {
+    color: black;
+    font-size: 1.4rem;
+}
+
+ /* width */
+.scroll-nav::-webkit-scrollbar {
+  width: 0px;
+	height: 3px;
+	
+}
+
+/* Track */
+.scroll-nav::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+/* Handle */
+.scroll-nav::-webkit-scrollbar-thumb {
+  background: #000; 
+}
+
+/* Handle on hover */
+.scroll-nav::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+@media (min-width: 992px) {
+    .mailchimp-form {
+        width: 50%;
+    }
+}
+
+
+#catbar {
+    padding-top: 0;
+}
+
+#catbar .scroll-nav {
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0px;
+	overflow-y: hidden;
+	width: 100%;
+    text-transform: uppercase;
+	margin-bottom: 0;
+	padding: 5px;
+}
+#catbar .container {
+	overflow: hidden;
+}
+
+#catbar li {
+list-style: none;
+}
+
+#catbar a {
+	color: black;
+	padding:7px;
+	display: inline-block;
+	border: 1px solid black;
+    border-radius: 10px;	
+	margin-left: 2px;
+    margin-right: 2px;
+	transition: 0.2s linear;
+}
+
+#catbar a:first-of-type {
+	margin-left: 0px;
+}
+
+#catbar a:last-of-type {
+	margin-right: 0px;
+}
+
+#catbar a:hover {
+	text-decoration: none;
+	color: white;
+	background: black;
+	transition: 0.2s linear
+}
+
+#catbar a.active {
+    background: black;
+    color: white;
+}
+
+#promote {
+	border: 2px solid black;
+	background: #CCCCCC;
+}
+
+#promote input {
+	border: 1px solid black;
+	margin: 2px;
+}
+
+.btn-submit {
+	width: 100%;
+	margin-top: 10px;
+    border-radius: 5px;
+}
+
+.ptb35 {
+	padding-top: 35px;
+	padding-bottom: 35px;
+}
+
+
+.social i {
+    font-size: 3rem;
+    color: gray;
+    padding: 10px;
+}
+
+h2.background {
+    position: relative;
+    z-index: 1;
+	font-size: 3rem;
+}
+
+h2.background:before {
+        border-top: 2px solid #000;
+        content:"";
+        margin: 0 auto; /* this centers the line to the full width specified */
+        position: absolute; /* positioning must be absolute here, and relative positioning must be applied to the parent */
+        top: 50%; left: 0; right: 0; bottom: 0;
+        width: 100%;
+        z-index: -1;
+    }
+	
+h2.background span { 
+        /* to hide the lines from behind the text, you have to set the background color the same as the container */ 
+        background: #fff; 
+        padding: 0 15px; 
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        height: 35px;
+    }
+    
+    
+@media (max-width: 767px){
+    .social-footer > a {
+		display: inline-block;
+		font-size: 26px;
+		color: white;
+		margin-left: 10px;
+    }
+    .stockist-item {
+        height: auto;
+        padding: 5px;
+    }    
+    .loading-logo {
+        width: 100%;
+    }   
+	#gender > .row {
+		margin-left: -5px;
+		margin-right: -5px;
+	}
+	#gender .gender-btn {
+		width: 47%;
+	}
+	
+	.back-btn > i {
+		margin-top: 15px;
+		font-size: 32px;
+		color: gray;
+	}
+}
+
+@media (max-width: 1199px) {
+    .stockist-text {
+        height: 100%;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        font-size: 1.4rem;
+        color: black;
+    }
+    .stockist-text p {
+        position: absolute;
+        width: 94%;
+        padding-left: 10px;
+        padding-right: 10px;
+        white-space: pre-wrap;
+    }
+    
+}
+@media (min-width: 768px){
+	.social-footer > a {
+		padding: 20px;
+		font-size: 3rem;
+		color: white;
+    }
+    .stockist-item {
+        height: auto;
+        padding: 10px;
+    }    
+    .loading-logo {
+        width: 50%;
+    }
+    .stockist-text p {
+        position: absolute;
+        top: 40%;
+        width: 93%;
+    }
+	#gender > .row {
+		margin-left: -10px;
+		margin-right: -10px;
+	}
+	.back-btn > i {
+		margin-top: 10px;
+		font-size: 44px;
+		color: gray;
+	}
+	#categories .category-btn {
+		width: 95%;
+	}
+		
+}
+
+.category-title {
+    padding: 0;
+    flex: 0 0 90%;
+    max-width: 90%;
+	padding-left: 20px;
+    padding-right: 8px;
+}
+
+.backbtn {
+	padding: 0px;
+}
+
+@media (min-width: 1200px){
+    .stockist-text {
+        height: 250px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        font-size: 1.4rem;
+        color: black;
+    }
+}
+
+.space_mono {
+	font-family: 'space_monobold';
+}
+
+.privacy-policy {
+    color: black;
+    text-decoration: underline;
+}
